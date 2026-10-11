@@ -1,0 +1,73 @@
+indicator:
+  name: Lake Ice
+  slug: lake-ice
+  publisher: U.S. Environmental Protection Agency
+  source_page: https://19january2025snapshot.epa.gov/climate-indicators/climate-change-indicators-lake-ice/index.html
+  technical_documentation: https://19january2025snapshot.epa.gov/system/files/documents/2024-06/lake-ice_documentation.pdf
+  rights: Public domain, work of the U.S. Government (17 U.S.C. 105)
+datasets:
+- file: lake_ice_freeze_dates.csv
+  figure: Figure 1
+  figure_title: Figure 1. Date of First Freeze for Selected U.S. Lakes, 1850-2019
+  source_file: lake-ice_fig-1.csv
+  source_sha256: 07ca0c4d933fa86f2b7fbb92837a76808a33a8b1ac0e0af31ee34a6bdaabf1b6
+  source_encoding: UTF-8
+  data_source: Various organizations
+  web_update: April 2021
+  unit: days from January 1
+  rows: 1259
+  columns:
+  - name: year
+    type: integer
+    description: Year.
+  - name: lake
+    type: string
+    description: Lake name, normalised to one spelling across all three files.
+  - name: value
+    type: number
+    description: Date of first freeze, in days from January 1 (negative = before January
+      1), as published by EPA.
+- file: lake_ice_thaw_dates.csv
+  figure: Figure 2
+  figure_title: Figure 2. Date of Ice Thaw for Selected U.S. Lakes, 1840-2019
+  source_file: lake-ice_fig-2.csv
+  source_sha256: 2e94ba491fe6b55c8f12f9694ba7a93dd2bba0256e00734d164670fcab32c284
+  source_encoding: UTF-8
+  data_source: Various organizations
+  web_update: April 2021
+  unit: days from January 1
+  rows: 2154
+  columns:
+  - name: year
+    type: integer
+    description: Year.
+  - name: lake
+    type: string
+    description: Lake name, normalised to one spelling across all three files.
+  - name: value
+    type: number
+    description: Date of ice thaw, in days from January 1, as published by EPA.
+- file: lake_ice_thaw_change.csv
+  figure: Figure 3
+  figure_title: Figure 3. Change in Ice Thaw Dates for Selected U.S. Lakes, 1905-2019
+  source_file: lake-ice_fig-3.csv
+  source_sha256: a2984b0acc1d55a7bc7bf346782fa5271ce6f23670e8da3e6ba92bfcb60e4422
+  source_encoding: UTF-8
+  data_source: Various organizations
+  web_update: April 2021
+  unit: days change from 1905 to 2019
+  rows: 14
+  columns:
+  - name: lake
+    type: string
+    description: Lake name, normalised to one spelling across all three files.
+  - name: latitude
+    type: number
+    description: Latitude of the lake in decimal degrees (north positive).
+  - name: longitude
+    type: number
+    description: Longitude of the lake in decimal degrees (west negative).
+  - name: value
+    type: number
+    description: Change in ice thaw date from 1905 to 2019, in days (negative = earlier
+      thaw).
